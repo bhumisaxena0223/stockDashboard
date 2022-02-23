@@ -10,6 +10,10 @@ export default {
     const products = await userProductDb.readAll()
     commit('setProducts', products)
   },
+  getUserStocks: async ({ commit }, stocks) => {
+    console.log(stocks, 'stocks')
+    commit('setStocks', stocks)
+  },
 
   /**
    * Create a product for current loggedin user

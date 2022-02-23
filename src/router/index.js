@@ -29,6 +29,15 @@ const router = new Router({
       }
     },
     {
+      path: '/stock-table',
+      name: 'StockTable',
+      component: () =>
+        import(/* webpackChunkName: "client-chunk-login" */ '@/views/StockTable.vue'),
+      meta: {
+        authNotRequired: true
+      }
+    },
+    {
       path: '/check-login',
       name: 'check-login',
       component: CheckLogin,

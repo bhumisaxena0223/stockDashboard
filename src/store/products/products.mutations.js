@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 export default {
   /* Product input name */
   setProductNameToCreate: (state, productNameToCreate) =>
@@ -5,6 +6,17 @@ export default {
 
   /* Products */
   setProducts: (state, products) => (state.products = products),
+  // set Stocks
+  setStocks: (state, payload) => {
+    console.log(payload.opem)
+    state.stocks = payload.stocks
+    state.open = payload.open
+    state.high = payload.high
+    state.close = payload.close
+    state.low = payload.low
+    state.volume = payload.volume
+  },
+
   addProduct: (state, product) => state.products.push(product),
   removeProductById: (state, productId) => {
     const index = state.products.findIndex(product => product.id === productId)
