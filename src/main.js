@@ -1,5 +1,8 @@
 import Vue from 'vue'
 
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+import VueApexCharts from 'vue-apexcharts'
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -9,8 +12,13 @@ import '@/firebase/init'
 import '@/firebase/authentication'
 import '@/misc/handle-apple-install-prompt'
 import 'pwacompat'
+import './assets/tailwind.css'
 
 Vue.config.productionTip = false
+Vue.use(VueAxios, axios)
+Vue.use(VueApexCharts)
+
+Vue.component('apexchart', VueApexCharts)
 
 new Vue({
   router,

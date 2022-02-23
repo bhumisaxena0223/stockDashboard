@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav-bar></nav-bar>
-    <div class="main-wrapper">
+    <div>
       <router-view />
     </div>
 
@@ -78,7 +78,7 @@ body {
       padding: 20px;
 
       .page-wrapper {
-        width: 60%;
+        // width: 60%;
         margin: auto;
 
         @media screen and (max-width: 1000px) {
